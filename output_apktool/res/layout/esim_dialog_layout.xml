@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/progress_layout" android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <EditText android:id="@id/activation_code" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:inputType="text" />
+        <CheckBox android:id="@id/activate_esim" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Activate after download" />
+    </LinearLayout>
+</ScrollView>

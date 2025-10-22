@@ -1,0 +1,133 @@
+.class Lorg/bouncycastle/openssl/jcajce/JcePEMEncryptorBuilder$1;
+.super Ljava/lang/Object;
+.source "JcePEMEncryptorBuilder.java"
+
+# interfaces
+.implements Lorg/bouncycastle/openssl/PEMEncryptor;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lorg/bouncycastle/openssl/jcajce/JcePEMEncryptorBuilder;->build([C)Lorg/bouncycastle/openssl/PEMEncryptor;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic this$0:Lorg/bouncycastle/openssl/jcajce/JcePEMEncryptorBuilder;
+
+.field final synthetic val$iv:[B
+
+.field final synthetic val$password:[C
+
+
+# direct methods
+.method constructor <init>(Lorg/bouncycastle/openssl/jcajce/JcePEMEncryptorBuilder;[B[C)V
+    .locals 0
+    .param p1, "this$0"    # Lorg/bouncycastle/openssl/jcajce/JcePEMEncryptorBuilder;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$iv",
+            "val$password"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
+
+    .line 60
+    iput-object p2, p0, Lorg/bouncycastle/openssl/jcajce/JcePEMEncryptorBuilder$1;->val$iv:[B
+
+    iput-object p3, p0, Lorg/bouncycastle/openssl/jcajce/JcePEMEncryptorBuilder$1;->val$password:[C
+
+    iput-object p1, p0, Lorg/bouncycastle/openssl/jcajce/JcePEMEncryptorBuilder$1;->this$0:Lorg/bouncycastle/openssl/jcajce/JcePEMEncryptorBuilder;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public encrypt([B)[B
+    .locals 7
+    .param p1, "encoding"    # [B
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "encoding"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lorg/bouncycastle/openssl/PEMException;
+        }
+    .end annotation
+
+    .line 74
+    iget-object v0, p0, Lorg/bouncycastle/openssl/jcajce/JcePEMEncryptorBuilder$1;->this$0:Lorg/bouncycastle/openssl/jcajce/JcePEMEncryptorBuilder;
+
+    invoke-static {v0}, Lorg/bouncycastle/openssl/jcajce/JcePEMEncryptorBuilder;->-$$Nest$fgethelper(Lorg/bouncycastle/openssl/jcajce/JcePEMEncryptorBuilder;)Lorg/bouncycastle/jcajce/util/JcaJceHelper;
+
+    move-result-object v2
+
+    iget-object v4, p0, Lorg/bouncycastle/openssl/jcajce/JcePEMEncryptorBuilder$1;->val$password:[C
+
+    iget-object v0, p0, Lorg/bouncycastle/openssl/jcajce/JcePEMEncryptorBuilder$1;->this$0:Lorg/bouncycastle/openssl/jcajce/JcePEMEncryptorBuilder;
+
+    invoke-static {v0}, Lorg/bouncycastle/openssl/jcajce/JcePEMEncryptorBuilder;->-$$Nest$fgetalgorithm(Lorg/bouncycastle/openssl/jcajce/JcePEMEncryptorBuilder;)Ljava/lang/String;
+
+    move-result-object v5
+
+    iget-object v6, p0, Lorg/bouncycastle/openssl/jcajce/JcePEMEncryptorBuilder$1;->val$iv:[B
+
+    const/4 v1, 0x1
+
+    move-object v3, p1
+
+    .end local p1    # "encoding":[B
+    .local v3, "encoding":[B
+    invoke-static/range {v1 .. v6}, Lorg/bouncycastle/openssl/jcajce/PEMUtilities;->crypt(ZLorg/bouncycastle/jcajce/util/JcaJceHelper;[B[CLjava/lang/String;[B)[B
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public getAlgorithm()Ljava/lang/String;
+    .locals 1
+
+    .line 63
+    iget-object v0, p0, Lorg/bouncycastle/openssl/jcajce/JcePEMEncryptorBuilder$1;->this$0:Lorg/bouncycastle/openssl/jcajce/JcePEMEncryptorBuilder;
+
+    invoke-static {v0}, Lorg/bouncycastle/openssl/jcajce/JcePEMEncryptorBuilder;->-$$Nest$fgetalgorithm(Lorg/bouncycastle/openssl/jcajce/JcePEMEncryptorBuilder;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getIV()[B
+    .locals 1
+
+    .line 68
+    iget-object v0, p0, Lorg/bouncycastle/openssl/jcajce/JcePEMEncryptorBuilder$1;->val$iv:[B
+
+    return-object v0
+.end method

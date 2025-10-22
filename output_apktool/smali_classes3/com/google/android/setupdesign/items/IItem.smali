@@ -1,0 +1,31 @@
+.class public interface abstract Lcom/google/android/setupdesign/items/IItem;
+.super Ljava/lang/Object;
+.source "IItem.java"
+
+
+# virtual methods
+.method public abstract getLayoutResource()I
+.end method
+
+.method public abstract isActionable()Z
+.end method
+
+.method public abstract isEnabled()Z
+.end method
+
+.method public abstract isGroupDivider()Z
+.end method
+
+.method public abstract isRecyclable()Z
+.end method
+
+.method public abstract onBindView(Landroid/view/View;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "view"
+        }
+    .end annotation
+.end method

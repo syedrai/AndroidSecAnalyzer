@@ -1,0 +1,217 @@
+.class public Lorg/bouncycastle/asn1/esf/OcspIdentifier;
+.super Lorg/bouncycastle/asn1/ASN1Object;
+.source "OcspIdentifier.java"
+
+
+# instance fields
+.field private ocspResponderID:Lorg/bouncycastle/asn1/ocsp/ResponderID;
+
+.field private producedAt:Lorg/bouncycastle/asn1/ASN1GeneralizedTime;
+
+
+# direct methods
+.method private constructor <init>(Lorg/bouncycastle/asn1/ASN1Sequence;)V
+    .locals 4
+    .param p1, "seq"    # Lorg/bouncycastle/asn1/ASN1Sequence;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "seq"
+        }
+    .end annotation
+
+    .line 40
+    invoke-direct {p0}, Lorg/bouncycastle/asn1/ASN1Object;-><init>()V
+
+    .line 41
+    invoke-virtual {p1}, Lorg/bouncycastle/asn1/ASN1Sequence;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_0
+
+    .line 46
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Lorg/bouncycastle/asn1/ASN1Sequence;->getObjectAt(I)Lorg/bouncycastle/asn1/ASN1Encodable;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lorg/bouncycastle/asn1/ocsp/ResponderID;->getInstance(Ljava/lang/Object;)Lorg/bouncycastle/asn1/ocsp/ResponderID;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lorg/bouncycastle/asn1/esf/OcspIdentifier;->ocspResponderID:Lorg/bouncycastle/asn1/ocsp/ResponderID;
+
+    .line 47
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Lorg/bouncycastle/asn1/ASN1Sequence;->getObjectAt(I)Lorg/bouncycastle/asn1/ASN1Encodable;
+
+    move-result-object v0
+
+    check-cast v0, Lorg/bouncycastle/asn1/ASN1GeneralizedTime;
+
+    iput-object v0, p0, Lorg/bouncycastle/asn1/esf/OcspIdentifier;->producedAt:Lorg/bouncycastle/asn1/ASN1GeneralizedTime;
+
+    .line 48
+    return-void
+
+    .line 43
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    .line 44
+    invoke-virtual {p1}, Lorg/bouncycastle/asn1/ASN1Sequence;->size()I
+
+    move-result v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Bad sequence size: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public constructor <init>(Lorg/bouncycastle/asn1/ocsp/ResponderID;Lorg/bouncycastle/asn1/ASN1GeneralizedTime;)V
+    .locals 0
+    .param p1, "ocspResponderID"    # Lorg/bouncycastle/asn1/ocsp/ResponderID;
+    .param p2, "producedAt"    # Lorg/bouncycastle/asn1/ASN1GeneralizedTime;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "ocspResponderID",
+            "producedAt"
+        }
+    .end annotation
+
+    .line 51
+    invoke-direct {p0}, Lorg/bouncycastle/asn1/ASN1Object;-><init>()V
+
+    .line 52
+    iput-object p1, p0, Lorg/bouncycastle/asn1/esf/OcspIdentifier;->ocspResponderID:Lorg/bouncycastle/asn1/ocsp/ResponderID;
+
+    .line 53
+    iput-object p2, p0, Lorg/bouncycastle/asn1/esf/OcspIdentifier;->producedAt:Lorg/bouncycastle/asn1/ASN1GeneralizedTime;
+
+    .line 54
+    return-void
+.end method
+
+.method public static getInstance(Ljava/lang/Object;)Lorg/bouncycastle/asn1/esf/OcspIdentifier;
+    .locals 2
+    .param p0, "obj"    # Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "obj"
+        }
+    .end annotation
+
+    .line 27
+    instance-of v0, p0, Lorg/bouncycastle/asn1/esf/OcspIdentifier;
+
+    if-eqz v0, :cond_0
+
+    .line 29
+    move-object v0, p0
+
+    check-cast v0, Lorg/bouncycastle/asn1/esf/OcspIdentifier;
+
+    return-object v0
+
+    .line 31
+    :cond_0
+    if-eqz p0, :cond_1
+
+    .line 33
+    new-instance v0, Lorg/bouncycastle/asn1/esf/OcspIdentifier;
+
+    invoke-static {p0}, Lorg/bouncycastle/asn1/ASN1Sequence;->getInstance(Ljava/lang/Object;)Lorg/bouncycastle/asn1/ASN1Sequence;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/esf/OcspIdentifier;-><init>(Lorg/bouncycastle/asn1/ASN1Sequence;)V
+
+    return-object v0
+
+    .line 36
+    :cond_1
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public getOcspResponderID()Lorg/bouncycastle/asn1/ocsp/ResponderID;
+    .locals 1
+
+    .line 58
+    iget-object v0, p0, Lorg/bouncycastle/asn1/esf/OcspIdentifier;->ocspResponderID:Lorg/bouncycastle/asn1/ocsp/ResponderID;
+
+    return-object v0
+.end method
+
+.method public getProducedAt()Lorg/bouncycastle/asn1/ASN1GeneralizedTime;
+    .locals 1
+
+    .line 63
+    iget-object v0, p0, Lorg/bouncycastle/asn1/esf/OcspIdentifier;->producedAt:Lorg/bouncycastle/asn1/ASN1GeneralizedTime;
+
+    return-object v0
+.end method
+
+.method public toASN1Primitive()Lorg/bouncycastle/asn1/ASN1Primitive;
+    .locals 2
+
+    .line 68
+    new-instance v0, Lorg/bouncycastle/asn1/ASN1EncodableVector;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/ASN1EncodableVector;-><init>(I)V
+
+    .line 69
+    .local v0, "v":Lorg/bouncycastle/asn1/ASN1EncodableVector;
+    iget-object v1, p0, Lorg/bouncycastle/asn1/esf/OcspIdentifier;->ocspResponderID:Lorg/bouncycastle/asn1/ocsp/ResponderID;
+
+    invoke-virtual {v0, v1}, Lorg/bouncycastle/asn1/ASN1EncodableVector;->add(Lorg/bouncycastle/asn1/ASN1Encodable;)V
+
+    .line 70
+    iget-object v1, p0, Lorg/bouncycastle/asn1/esf/OcspIdentifier;->producedAt:Lorg/bouncycastle/asn1/ASN1GeneralizedTime;
+
+    invoke-virtual {v0, v1}, Lorg/bouncycastle/asn1/ASN1EncodableVector;->add(Lorg/bouncycastle/asn1/ASN1Encodable;)V
+
+    .line 71
+    new-instance v1, Lorg/bouncycastle/asn1/DERSequence;
+
+    invoke-direct {v1, v0}, Lorg/bouncycastle/asn1/DERSequence;-><init>(Lorg/bouncycastle/asn1/ASN1EncodableVector;)V
+
+    return-object v1
+.end method

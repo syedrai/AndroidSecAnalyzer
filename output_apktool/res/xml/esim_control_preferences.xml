@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/manage_esim"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:testdpc="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="@string/manage_esim">
+        <com.afwsamples.testdpc.common.preference.DpcPreference android:title="@string/download_esim" android:key="download_esim" testdpc:admin="notNone" testdpc:minSdkVersion="V" />
+        <com.afwsamples.testdpc.common.preference.DpcPreference android:title="@string/delete_esim" android:key="delete_esim" testdpc:admin="notNone" testdpc:minSdkVersion="V" />
+        <com.afwsamples.testdpc.common.preference.DpcPreference android:title="@string/get_managed_esim" android:key="get_managed_esim" testdpc:admin="notNone" testdpc:minSdkVersion="V" />
+    </PreferenceCategory>
+</PreferenceScreen>

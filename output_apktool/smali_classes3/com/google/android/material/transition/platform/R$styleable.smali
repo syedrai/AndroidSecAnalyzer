@@ -1,0 +1,231 @@
+.class public final Lcom/google/android/material/transition/platform/R$styleable;
+.super Ljava/lang/Object;
+.source "R.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/android/material/transition/platform/R;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "styleable"
+.end annotation
+
+
+# static fields
+.field public static final FlowLayout:[I
+
+.field public static final FlowLayout_horizontalItemSpacing:I = 0x0
+
+.field public static final FlowLayout_lineSpacing:I = 0x1
+
+.field public static final ForegroundLinearLayout:[I
+
+.field public static final ForegroundLinearLayout_android_foreground:I = 0x0
+
+.field public static final ForegroundLinearLayout_android_foregroundGravity:I = 0x1
+
+.field public static final ForegroundLinearLayout_foregroundInsidePadding:I = 0x2
+
+.field public static final Insets:[I
+
+.field public static final Insets_marginBottomSystemWindowInsets:I = 0x0
+
+.field public static final Insets_marginLeftSystemWindowInsets:I = 0x1
+
+.field public static final Insets_marginRightSystemWindowInsets:I = 0x2
+
+.field public static final Insets_marginTopSystemWindowInsets:I = 0x3
+
+.field public static final Insets_paddingBottomSystemWindowInsets:I = 0x4
+
+.field public static final Insets_paddingLeftSystemWindowInsets:I = 0x5
+
+.field public static final Insets_paddingRightSystemWindowInsets:I = 0x6
+
+.field public static final Insets_paddingStartSystemWindowInsets:I = 0x7
+
+.field public static final Insets_paddingTopSystemWindowInsets:I = 0x8
+
+.field public static final MaterialShape:[I
+
+.field public static final MaterialShape_shapeAppearance:I = 0x0
+
+.field public static final MaterialShape_shapeAppearanceOverlay:I = 0x1
+
+.field public static final MaterialSpring:[I
+
+.field public static final MaterialSpring_damping:I = 0x0
+
+.field public static final MaterialSpring_stiffness:I = 0x1
+
+.field public static final ScrimInsetsFrameLayout:[I
+
+.field public static final ScrimInsetsFrameLayout_insetForeground:I = 0x0
+
+.field public static final ShapeAppearance:[I
+
+.field public static final ShapeAppearance_cornerFamily:I = 0x0
+
+.field public static final ShapeAppearance_cornerFamilyBottomLeft:I = 0x1
+
+.field public static final ShapeAppearance_cornerFamilyBottomRight:I = 0x2
+
+.field public static final ShapeAppearance_cornerFamilyTopLeft:I = 0x3
+
+.field public static final ShapeAppearance_cornerFamilyTopRight:I = 0x4
+
+.field public static final ShapeAppearance_cornerSize:I = 0x5
+
+.field public static final ShapeAppearance_cornerSizeBottomLeft:I = 0x6
+
+.field public static final ShapeAppearance_cornerSizeBottomRight:I = 0x7
+
+.field public static final ShapeAppearance_cornerSizeTopLeft:I = 0x8
+
+.field public static final ShapeAppearance_cornerSizeTopRight:I = 0x9
+
+.field public static final StateListSizeChange:[I
+
+.field public static final StateListSizeChange_widthChange:I = 0x0
+
+.field public static final ThemeEnforcement:[I
+
+.field public static final ThemeEnforcement_android_textAppearance:I = 0x0
+
+.field public static final ThemeEnforcement_enforceMaterialTheme:I = 0x1
+
+.field public static final ThemeEnforcement_enforceTextAppearance:I = 0x2
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
+
+    const v0, 0x7f040284
+
+    const v1, 0x7f040330
+
+    filled-new-array {v0, v1}, [I
+
+    move-result-object v0
+
+    sput-object v0, Lcom/google/android/material/transition/platform/R$styleable;->FlowLayout:[I
+
+    const v0, 0x1010200
+
+    const v1, 0x7f04025d
+
+    const v2, 0x1010109
+
+    filled-new-array {v2, v0, v1}, [I
+
+    move-result-object v0
+
+    sput-object v0, Lcom/google/android/material/transition/platform/R$styleable;->ForegroundLinearLayout:[I
+
+    const/16 v0, 0x9
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_0
+
+    sput-object v0, Lcom/google/android/material/transition/platform/R$styleable;->Insets:[I
+
+    const v0, 0x7f040468
+
+    const v1, 0x7f040473
+
+    filled-new-array {v0, v1}, [I
+
+    move-result-object v0
+
+    sput-object v0, Lcom/google/android/material/transition/platform/R$styleable;->MaterialShape:[I
+
+    const v0, 0x7f040191
+
+    const v1, 0x7f0404c9
+
+    filled-new-array {v0, v1}, [I
+
+    move-result-object v0
+
+    sput-object v0, Lcom/google/android/material/transition/platform/R$styleable;->MaterialSpring:[I
+
+    const v0, 0x7f0402aa
+
+    filled-new-array {v0}, [I
+
+    move-result-object v0
+
+    sput-object v0, Lcom/google/android/material/transition/platform/R$styleable;->ScrimInsetsFrameLayout:[I
+
+    const/16 v0, 0xa
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_1
+
+    sput-object v0, Lcom/google/android/material/transition/platform/R$styleable;->ShapeAppearance:[I
+
+    const v0, 0x7f0406aa
+
+    filled-new-array {v0}, [I
+
+    move-result-object v0
+
+    sput-object v0, Lcom/google/android/material/transition/platform/R$styleable;->StateListSizeChange:[I
+
+    const v0, 0x7f0401e5
+
+    const v1, 0x7f0401e6
+
+    const v2, 0x1010034
+
+    filled-new-array {v2, v0, v1}, [I
+
+    move-result-object v0
+
+    sput-object v0, Lcom/google/android/material/transition/platform/R$styleable;->ThemeEnforcement:[I
+
+    return-void
+
+    nop
+
+    :array_0
+    .array-data 4
+        0x7f04035a
+        0x7f04035c
+        0x7f04035d
+        0x7f04035e
+        0x7f040401
+        0x7f040403
+        0x7f040404
+        0x7f040406
+        0x7f040408
+    .end array-data
+
+    :array_1
+    .array-data 4
+        0x7f040171
+        0x7f040172
+        0x7f040173
+        0x7f040174
+        0x7f040175
+        0x7f040177
+        0x7f040178
+        0x7f040179
+        0x7f04017a
+        0x7f04017b
+    .end array-data
+.end method
+
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method

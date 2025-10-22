@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText android:id="@id/keyPairAlias" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/key_pair_alias_description" android:ems="10" android:layout_weight="1.0" android:inputType="text" />
+    <EditText android:id="@id/packageName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/grant_to_package_name_description" android:ems="10" android:layout_weight="1.0" android:inputType="text" />
+</LinearLayout>

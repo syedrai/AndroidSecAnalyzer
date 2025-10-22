@@ -1,0 +1,311 @@
+.class public Lorg/bouncycastle/jce/spec/IESParameterSpec;
+.super Ljava/lang/Object;
+.source "IESParameterSpec.java"
+
+# interfaces
+.implements Ljava/security/spec/AlgorithmParameterSpec;
+
+
+# instance fields
+.field private cipherKeySize:I
+
+.field private derivation:[B
+
+.field private encoding:[B
+
+.field private macKeySize:I
+
+.field private nonce:[B
+
+.field private usePointCompression:Z
+
+
+# direct methods
+.method public constructor <init>([B[BI)V
+    .locals 7
+    .param p1, "derivation"    # [B
+    .param p2, "encoding"    # [B
+    .param p3, "macKeySize"    # I
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "derivation",
+            "encoding",
+            "macKeySize"
+        }
+    .end annotation
+
+    .line 33
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v4, -0x1
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move v3, p3
+
+    .end local p1    # "derivation":[B
+    .end local p2    # "encoding":[B
+    .end local p3    # "macKeySize":I
+    .local v1, "derivation":[B
+    .local v2, "encoding":[B
+    .local v3, "macKeySize":I
+    invoke-direct/range {v0 .. v6}, Lorg/bouncycastle/jce/spec/IESParameterSpec;-><init>([B[BII[BZ)V
+
+    .line 34
+    return-void
+.end method
+
+.method public constructor <init>([B[BII[B)V
+    .locals 7
+    .param p1, "derivation"    # [B
+    .param p2, "encoding"    # [B
+    .param p3, "macKeySize"    # I
+    .param p4, "cipherKeySize"    # I
+    .param p5, "nonce"    # [B
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "derivation",
+            "encoding",
+            "macKeySize",
+            "cipherKeySize",
+            "nonce"
+        }
+    .end annotation
+
+    .line 52
+    const/4 v6, 0x0
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move v3, p3
+
+    move v4, p4
+
+    move-object v5, p5
+
+    .end local p1    # "derivation":[B
+    .end local p2    # "encoding":[B
+    .end local p3    # "macKeySize":I
+    .end local p4    # "cipherKeySize":I
+    .end local p5    # "nonce":[B
+    .local v1, "derivation":[B
+    .local v2, "encoding":[B
+    .local v3, "macKeySize":I
+    .local v4, "cipherKeySize":I
+    .local v5, "nonce":[B
+    invoke-direct/range {v0 .. v6}, Lorg/bouncycastle/jce/spec/IESParameterSpec;-><init>([B[BII[BZ)V
+
+    .line 53
+    return-void
+.end method
+
+.method public constructor <init>([B[BII[BZ)V
+    .locals 4
+    .param p1, "derivation"    # [B
+    .param p2, "encoding"    # [B
+    .param p3, "macKeySize"    # I
+    .param p4, "cipherKeySize"    # I
+    .param p5, "nonce"    # [B
+    .param p6, "usePointCompression"    # Z
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "derivation",
+            "encoding",
+            "macKeySize",
+            "cipherKeySize",
+            "nonce",
+            "usePointCompression"
+        }
+    .end annotation
+
+    .line 72
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 73
+    const/4 v0, 0x0
+
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_0
+
+    .line 75
+    array-length v2, p1
+
+    new-array v2, v2, [B
+
+    iput-object v2, p0, Lorg/bouncycastle/jce/spec/IESParameterSpec;->derivation:[B
+
+    .line 76
+    iget-object v2, p0, Lorg/bouncycastle/jce/spec/IESParameterSpec;->derivation:[B
+
+    array-length v3, p1
+
+    invoke-static {p1, v1, v2, v1, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    goto :goto_0
+
+    .line 80
+    :cond_0
+    iput-object v0, p0, Lorg/bouncycastle/jce/spec/IESParameterSpec;->derivation:[B
+
+    .line 83
+    :goto_0
+    if-eqz p2, :cond_1
+
+    .line 85
+    array-length v0, p2
+
+    new-array v0, v0, [B
+
+    iput-object v0, p0, Lorg/bouncycastle/jce/spec/IESParameterSpec;->encoding:[B
+
+    .line 86
+    iget-object v0, p0, Lorg/bouncycastle/jce/spec/IESParameterSpec;->encoding:[B
+
+    array-length v2, p2
+
+    invoke-static {p2, v1, v0, v1, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    goto :goto_1
+
+    .line 90
+    :cond_1
+    iput-object v0, p0, Lorg/bouncycastle/jce/spec/IESParameterSpec;->encoding:[B
+
+    .line 93
+    :goto_1
+    iput p3, p0, Lorg/bouncycastle/jce/spec/IESParameterSpec;->macKeySize:I
+
+    .line 94
+    iput p4, p0, Lorg/bouncycastle/jce/spec/IESParameterSpec;->cipherKeySize:I
+
+    .line 95
+    invoke-static {p5}, Lorg/bouncycastle/util/Arrays;->clone([B)[B
+
+    move-result-object v0
+
+    iput-object v0, p0, Lorg/bouncycastle/jce/spec/IESParameterSpec;->nonce:[B
+
+    .line 96
+    iput-boolean p6, p0, Lorg/bouncycastle/jce/spec/IESParameterSpec;->usePointCompression:Z
+
+    .line 97
+    return-void
+.end method
+
+
+# virtual methods
+.method public getCipherKeySize()I
+    .locals 1
+
+    .line 128
+    iget v0, p0, Lorg/bouncycastle/jce/spec/IESParameterSpec;->cipherKeySize:I
+
+    return v0
+.end method
+
+.method public getDerivationV()[B
+    .locals 1
+
+    .line 104
+    iget-object v0, p0, Lorg/bouncycastle/jce/spec/IESParameterSpec;->derivation:[B
+
+    invoke-static {v0}, Lorg/bouncycastle/util/Arrays;->clone([B)[B
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getEncodingV()[B
+    .locals 1
+
+    .line 112
+    iget-object v0, p0, Lorg/bouncycastle/jce/spec/IESParameterSpec;->encoding:[B
+
+    invoke-static {v0}, Lorg/bouncycastle/util/Arrays;->clone([B)[B
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getMacKeySize()I
+    .locals 1
+
+    .line 120
+    iget v0, p0, Lorg/bouncycastle/jce/spec/IESParameterSpec;->macKeySize:I
+
+    return v0
+.end method
+
+.method public getNonce()[B
+    .locals 1
+
+    .line 138
+    iget-object v0, p0, Lorg/bouncycastle/jce/spec/IESParameterSpec;->nonce:[B
+
+    invoke-static {v0}, Lorg/bouncycastle/util/Arrays;->clone([B)[B
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getPointCompression()Z
+    .locals 1
+
+    .line 156
+    iget-boolean v0, p0, Lorg/bouncycastle/jce/spec/IESParameterSpec;->usePointCompression:Z
+
+    return v0
+.end method
+
+.method public setPointCompression(Z)V
+    .locals 0
+    .param p1, "usePointCompression"    # Z
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "usePointCompression"
+        }
+    .end annotation
+
+    .line 146
+    iput-boolean p1, p0, Lorg/bouncycastle/jce/spec/IESParameterSpec;->usePointCompression:Z
+
+    .line 147
+    return-void
+.end method

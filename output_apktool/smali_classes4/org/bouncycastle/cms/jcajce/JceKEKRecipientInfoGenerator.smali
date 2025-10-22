@@ -1,0 +1,130 @@
+.class public Lorg/bouncycastle/cms/jcajce/JceKEKRecipientInfoGenerator;
+.super Lorg/bouncycastle/cms/KEKRecipientInfoGenerator;
+.source "JceKEKRecipientInfoGenerator.java"
+
+
+# direct methods
+.method public constructor <init>(Lorg/bouncycastle/asn1/cms/KEKIdentifier;Ljavax/crypto/SecretKey;)V
+    .locals 1
+    .param p1, "kekIdentifier"    # Lorg/bouncycastle/asn1/cms/KEKIdentifier;
+    .param p2, "keyEncryptionKey"    # Ljavax/crypto/SecretKey;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "kekIdentifier",
+            "keyEncryptionKey"
+        }
+    .end annotation
+
+    .line 17
+    new-instance v0, Lorg/bouncycastle/operator/jcajce/JceSymmetricKeyWrapper;
+
+    invoke-direct {v0, p2}, Lorg/bouncycastle/operator/jcajce/JceSymmetricKeyWrapper;-><init>(Ljavax/crypto/SecretKey;)V
+
+    invoke-direct {p0, p1, v0}, Lorg/bouncycastle/cms/KEKRecipientInfoGenerator;-><init>(Lorg/bouncycastle/asn1/cms/KEKIdentifier;Lorg/bouncycastle/operator/SymmetricKeyWrapper;)V
+
+    .line 18
+    return-void
+.end method
+
+.method public constructor <init>([BLjavax/crypto/SecretKey;)V
+    .locals 2
+    .param p1, "keyIdentifier"    # [B
+    .param p2, "keyEncryptionKey"    # Ljavax/crypto/SecretKey;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "keyIdentifier",
+            "keyEncryptionKey"
+        }
+    .end annotation
+
+    .line 22
+    new-instance v0, Lorg/bouncycastle/asn1/cms/KEKIdentifier;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p1, v1, v1}, Lorg/bouncycastle/asn1/cms/KEKIdentifier;-><init>([BLorg/bouncycastle/asn1/ASN1GeneralizedTime;Lorg/bouncycastle/asn1/cms/OtherKeyAttribute;)V
+
+    invoke-direct {p0, v0, p2}, Lorg/bouncycastle/cms/jcajce/JceKEKRecipientInfoGenerator;-><init>(Lorg/bouncycastle/asn1/cms/KEKIdentifier;Ljavax/crypto/SecretKey;)V
+
+    .line 23
+    return-void
+.end method
+
+
+# virtual methods
+.method public setProvider(Ljava/lang/String;)Lorg/bouncycastle/cms/jcajce/JceKEKRecipientInfoGenerator;
+    .locals 1
+    .param p1, "providerName"    # Ljava/lang/String;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "providerName"
+        }
+    .end annotation
+
+    .line 34
+    iget-object v0, p0, Lorg/bouncycastle/cms/jcajce/JceKEKRecipientInfoGenerator;->wrapper:Lorg/bouncycastle/operator/SymmetricKeyWrapper;
+
+    check-cast v0, Lorg/bouncycastle/operator/jcajce/JceSymmetricKeyWrapper;
+
+    invoke-virtual {v0, p1}, Lorg/bouncycastle/operator/jcajce/JceSymmetricKeyWrapper;->setProvider(Ljava/lang/String;)Lorg/bouncycastle/operator/jcajce/JceSymmetricKeyWrapper;
+
+    .line 36
+    return-object p0
+.end method
+
+.method public setProvider(Ljava/security/Provider;)Lorg/bouncycastle/cms/jcajce/JceKEKRecipientInfoGenerator;
+    .locals 1
+    .param p1, "provider"    # Ljava/security/Provider;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "provider"
+        }
+    .end annotation
+
+    .line 27
+    iget-object v0, p0, Lorg/bouncycastle/cms/jcajce/JceKEKRecipientInfoGenerator;->wrapper:Lorg/bouncycastle/operator/SymmetricKeyWrapper;
+
+    check-cast v0, Lorg/bouncycastle/operator/jcajce/JceSymmetricKeyWrapper;
+
+    invoke-virtual {v0, p1}, Lorg/bouncycastle/operator/jcajce/JceSymmetricKeyWrapper;->setProvider(Ljava/security/Provider;)Lorg/bouncycastle/operator/jcajce/JceSymmetricKeyWrapper;
+
+    .line 29
+    return-object p0
+.end method
+
+.method public setSecureRandom(Ljava/security/SecureRandom;)Lorg/bouncycastle/cms/jcajce/JceKEKRecipientInfoGenerator;
+    .locals 1
+    .param p1, "random"    # Ljava/security/SecureRandom;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "random"
+        }
+    .end annotation
+
+    .line 41
+    iget-object v0, p0, Lorg/bouncycastle/cms/jcajce/JceKEKRecipientInfoGenerator;->wrapper:Lorg/bouncycastle/operator/SymmetricKeyWrapper;
+
+    check-cast v0, Lorg/bouncycastle/operator/jcajce/JceSymmetricKeyWrapper;
+
+    invoke-virtual {v0, p1}, Lorg/bouncycastle/operator/jcajce/JceSymmetricKeyWrapper;->setSecureRandom(Ljava/security/SecureRandom;)Lorg/bouncycastle/operator/jcajce/JceSymmetricKeyWrapper;
+
+    .line 43
+    return-object p0
+.end method

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RadioGroup android:id="@id/set_security_level_group" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <RadioButton android:id="@id/open" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/security_level_open" />
+        <RadioButton android:id="@id/personal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/security_level_personal" />
+        <RadioButton android:id="@id/enterprise_eap" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/security_level_enterprise_eap" />
+        <RadioButton android:id="@id/enterprise_192" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/security_level_enterprise_192" />
+    </RadioGroup>
+</LinearLayout>

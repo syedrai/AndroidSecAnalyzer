@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RadioGroup android:id="@id/set_list_type_group" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <RadioButton android:id="@id/allow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/type_allowlist" />
+        <RadioButton android:id="@id/deny" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/type_denylist" />
+    </RadioGroup>
+    <EditText android:id="@id/ssids" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/ssid_list_description" android:ems="10" android:layout_weight="1.0" android:inputType="text" />
+</LinearLayout>

@@ -1,0 +1,39 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: com.afwsamples.testdpc_9.0.13-9013_minAPI21(nodpi)_apkmirror.com.apk
+compressionType: false
+doNotCompress:
+- resources.arsc
+- META-INF/services/kotlinx.coroutines.CoroutineExceptionHandler
+- META-INF/services/kotlinx.coroutines.internal.MainDispatcherFactory
+- assets/empty_asset_generated_by_bazel~
+- assets/dexopt/baseline.prof
+- assets/dexopt/baseline.profm
+- kotlin/kotlin.kotlin_builtins
+- kotlin/annotation/annotation.kotlin_builtins
+- kotlin/collections/collections.kotlin_builtins
+- kotlin/concurrent/atomics/atomics.kotlin_builtins
+- kotlin/coroutines/coroutines.kotlin_builtins
+- kotlin/internal/internal.kotlin_builtins
+- kotlin/ranges/ranges.kotlin_builtins
+- kotlin/reflect/reflect.kotlin_builtins
+- png
+- res/raw/build_data.pb
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '21'
+  targetSdkVersion: '34'
+sharedLibrary: false
+sparseResources: false
+unknownFiles:
+  stamp-cert-sha256: '8'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.7.0-dirty
+versionInfo:
+  versionCode: '9013'
+  versionName: 9.0.13

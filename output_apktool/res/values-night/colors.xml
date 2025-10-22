@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="sud_color_on_surface">@color/sud_neutral90</color>
+    <color name="sud_color_primary">@color/sud_system_primary_dark</color>
+    <color name="sud_color_surface_container_high">@color/sud_system_surface_container_high_dark</color>
+    <color name="sud_color_surface_container_highest">@color/sud_neutral22</color>
+    <color name="sud_glif_expressive_footer_secondary_button_disable_text_color">#ffcac4d0</color>
+    <color name="sud_on_secondary_container">@color/sud_system_on_secondary_container_dark</color>
+    <color name="sud_on_surface_variant">@color/sud_system_on_surface_variant_dark</color>
+    <color name="sud_portal_pending_progress">@color/sud_portal_pending_progress_dark</color>
+    <color name="sud_system_error_warning">@color/sud_error_warning_default_dark</color>
+    <color name="sud_system_fallback_accent">@color/fallback_color_device_default_dark</color>
+    <color name="sud_system_on_primary">@color/sud_system_on_primary_dark</color>
+    <color name="sud_system_primary_text">@color/sud_primary_default_text_dark</color>
+    <color name="sud_system_secondary_text">@color/sud_secondary_default_text_dark</color>
+    <color name="sud_system_success_done">@color/success_color_device_default_dark</color>
+    <color name="sud_system_tertiary_text_inactive">@color/sud_inactive_default_dark</color>
+    <color name="sud_uniformity_backdrop_color">#ff2a2b2e</color>
+</resources>

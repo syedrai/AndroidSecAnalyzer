@@ -1,0 +1,90 @@
+.class Landroid/support/v7/util/DiffUtil$Range;
+.super Ljava/lang/Object;
+.source "DiffUtil.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroid/support/v7/util/DiffUtil;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x8
+    name = "Range"
+.end annotation
+
+
+# instance fields
+.field newListEnd:I
+
+.field newListStart:I
+
+.field oldListEnd:I
+
+.field oldListStart:I
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 570
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 571
+    return-void
+.end method
+
+.method public constructor <init>(IIII)V
+    .locals 0
+    .param p1, "oldListStart"    # I
+    .param p2, "oldListEnd"    # I
+    .param p3, "newListStart"    # I
+    .param p4, "newListEnd"    # I
+
+    .line 573
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 574
+    iput p1, p0, Landroid/support/v7/util/DiffUtil$Range;->oldListStart:I
+
+    .line 575
+    iput p2, p0, Landroid/support/v7/util/DiffUtil$Range;->oldListEnd:I
+
+    .line 576
+    iput p3, p0, Landroid/support/v7/util/DiffUtil$Range;->newListStart:I
+
+    .line 577
+    iput p4, p0, Landroid/support/v7/util/DiffUtil$Range;->newListEnd:I
+
+    .line 578
+    return-void
+.end method
+
+
+# virtual methods
+.method newSize()I
+    .locals 2
+
+    .line 585
+    iget v0, p0, Landroid/support/v7/util/DiffUtil$Range;->newListEnd:I
+
+    iget v1, p0, Landroid/support/v7/util/DiffUtil$Range;->newListStart:I
+
+    sub-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method oldSize()I
+    .locals 2
+
+    .line 581
+    iget v0, p0, Landroid/support/v7/util/DiffUtil$Range;->oldListEnd:I
+
+    iget v1, p0, Landroid/support/v7/util/DiffUtil$Range;->oldListStart:I
+
+    sub-int/2addr v0, v1
+
+    return v0
+.end method

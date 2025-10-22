@@ -1,0 +1,200 @@
+.class public Lorg/bouncycastle/pqc/crypto/lms/HSSSigner;
+.super Ljava/lang/Object;
+.source "HSSSigner.java"
+
+# interfaces
+.implements Lorg/bouncycastle/pqc/crypto/MessageSigner;
+
+
+# instance fields
+.field private privKey:Lorg/bouncycastle/pqc/crypto/lms/HSSPrivateKeyParameters;
+
+.field private pubKey:Lorg/bouncycastle/pqc/crypto/lms/HSSPublicKeyParameters;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 8
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public generateSignature([B)[B
+    .locals 5
+    .param p1, "message"    # [B
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "message"
+        }
+    .end annotation
+
+    .line 30
+    :try_start_0
+    iget-object v0, p0, Lorg/bouncycastle/pqc/crypto/lms/HSSSigner;->privKey:Lorg/bouncycastle/pqc/crypto/lms/HSSPrivateKeyParameters;
+
+    invoke-static {v0, p1}, Lorg/bouncycastle/pqc/crypto/lms/HSS;->generateSignature(Lorg/bouncycastle/pqc/crypto/lms/HSSPrivateKeyParameters;[B)Lorg/bouncycastle/pqc/crypto/lms/HSSSignature;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lorg/bouncycastle/pqc/crypto/lms/HSSSignature;->getEncoded()[B
+
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    .line 32
+    :catch_0
+    move-exception v0
+
+    .line 34
+    .local v0, "e":Ljava/io/IOException;
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    invoke-virtual {v0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
+
+    move-result-object v2
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v4, "unable to encode signature: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+.end method
+
+.method public init(ZLorg/bouncycastle/crypto/CipherParameters;)V
+    .locals 1
+    .param p1, "forSigning"    # Z
+    .param p2, "param"    # Lorg/bouncycastle/crypto/CipherParameters;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "forSigning",
+            "param"
+        }
+    .end annotation
+
+    .line 16
+    if-eqz p1, :cond_0
+
+    .line 18
+    move-object v0, p2
+
+    check-cast v0, Lorg/bouncycastle/pqc/crypto/lms/HSSPrivateKeyParameters;
+
+    iput-object v0, p0, Lorg/bouncycastle/pqc/crypto/lms/HSSSigner;->privKey:Lorg/bouncycastle/pqc/crypto/lms/HSSPrivateKeyParameters;
+
+    goto :goto_0
+
+    .line 22
+    :cond_0
+    move-object v0, p2
+
+    check-cast v0, Lorg/bouncycastle/pqc/crypto/lms/HSSPublicKeyParameters;
+
+    iput-object v0, p0, Lorg/bouncycastle/pqc/crypto/lms/HSSSigner;->pubKey:Lorg/bouncycastle/pqc/crypto/lms/HSSPublicKeyParameters;
+
+    .line 24
+    :goto_0
+    return-void
+.end method
+
+.method public verifySignature([B[B)Z
+    .locals 5
+    .param p1, "message"    # [B
+    .param p2, "signature"    # [B
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "message",
+            "signature"
+        }
+    .end annotation
+
+    .line 42
+    :try_start_0
+    iget-object v0, p0, Lorg/bouncycastle/pqc/crypto/lms/HSSSigner;->pubKey:Lorg/bouncycastle/pqc/crypto/lms/HSSPublicKeyParameters;
+
+    iget-object v1, p0, Lorg/bouncycastle/pqc/crypto/lms/HSSSigner;->pubKey:Lorg/bouncycastle/pqc/crypto/lms/HSSPublicKeyParameters;
+
+    invoke-virtual {v1}, Lorg/bouncycastle/pqc/crypto/lms/HSSPublicKeyParameters;->getL()I
+
+    move-result v1
+
+    invoke-static {p2, v1}, Lorg/bouncycastle/pqc/crypto/lms/HSSSignature;->getInstance(Ljava/lang/Object;I)Lorg/bouncycastle/pqc/crypto/lms/HSSSignature;
+
+    move-result-object v1
+
+    invoke-static {v0, v1, p1}, Lorg/bouncycastle/pqc/crypto/lms/HSS;->verifySignature(Lorg/bouncycastle/pqc/crypto/lms/HSSPublicKeyParameters;Lorg/bouncycastle/pqc/crypto/lms/HSSSignature;[B)Z
+
+    move-result v0
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return v0
+
+    .line 44
+    :catch_0
+    move-exception v0
+
+    .line 46
+    .local v0, "e":Ljava/io/IOException;
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    invoke-virtual {v0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
+
+    move-result-object v2
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v4, "unable to decode signature: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+.end method
