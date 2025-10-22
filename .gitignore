@@ -1,0 +1,5 @@
+output_apktool/
+reports/
+*.apk
+*.pyc
+__pycache__/
